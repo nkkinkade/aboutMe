@@ -1,0 +1,32 @@
+body {
+    width: 960px;
+    margin: 0 auto;
+    background-color: grey;
+}
+#nathan {
+    float: left;
+    vertical-align:middle;
+    margin: 0px 50px
+}
+
+header h1 {
+    background-color: black;
+    height: 50px;
+    color: gold;
+}
+
+p {
+    font-size: 20px;
+}
+
+footer h2 {
+    background: #00Bcff;
+}
+
+header {
+    text-align: center;
+}
+
+main img {
+    width: 350px;
+}
