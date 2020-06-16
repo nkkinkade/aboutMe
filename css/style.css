@@ -1,7 +1,7 @@
 body {
     width: 960px;
     margin: 0 auto;
-    background-color: grey;
+    background-color: rgba(95, 49, 6, 0.931);
 }
 #nathan {
     float: left;
@@ -19,8 +19,9 @@ p {
     font-size: 20px;
 }
 
-footer h2 {
-    background: #00Bcff;
+main h2 {
+    font-size: 30px;
+    text-shadow: 1px 1px blanchedalmond;
 }
 
 header {
