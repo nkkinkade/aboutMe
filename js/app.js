@@ -1,15 +1,12 @@
 'use strict';
 console.log('This file is connected');
 
-
-
 var userName = prompt('What is your name?').trim();
 while (!userName) {
   userName = prompt('What is your name, Please, provide it now!');
 }
 var greeting;
 greeting = 'Welcome, ' + userName + '!';
-
 
 
 document.getElementById('greeting').innerHTML = greeting;
@@ -104,4 +101,4 @@ while (opportunities > 0) {
   console.log('guessCount is ' + opportunities);
 }
 
-alert('The answer was 5!')
+alert('The answer was 5!');
