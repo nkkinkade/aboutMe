@@ -58,7 +58,7 @@ if (pets === 'yes' || pets === 'y') {
 
 var travel = prompt('Last one, ' + userName + '! Has Nathan ever traveled across the ocean?').toLowerCase().trim();
 while (travel !== 'yes' && travel !== 'no' && travel !== 'y' && travel !== 'n') {
-  travel = prompt('Yes/no or y/n only, ' + userName '. I\'m disapointed in you. Has Nathan ever traveled across the ocean?').toLowerCase().trim();
+  travel = prompt('Yes/no or y/n only, ' + userName + '. I\'m disapointed in you. Has Nathan ever traveled across the ocean?').toLowerCase().trim();
 }
 if (travel === 'yes' || travel === 'y') {
 //   console.log('Nope! Nathan has been to Canada and Mexico, but has yet to leave the continent.');
