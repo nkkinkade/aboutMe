@@ -1,3 +1,7 @@
+/* * { 
+    outline: dotted;
+} */
+
 body {
     width: 960px;
     margin: 0 auto;
@@ -9,25 +13,71 @@ body {
     margin: 0px 50px
 }
 
-header h1 {
+header {
     background-color: black;
     height: 50px;
     color: gold;
-}
-
-p {
-    font-size: 20px;
+    text-align: center;
+    font-size: 25px;
+    margin: 0;
 }
 
 main h2 {
     font-size: 30px;
     text-shadow: 1px 1px blanchedalmond;
+    padding-bottom: 15px;
 }
 
-header {
-    text-align: center;
+#lorem {
+    padding-top: 40px;
 }
 
 main img {
     width: 350px;
+}
+
+main p {
+    padding-bottom: 15px;
+    font-size: 20px;
+}
+
+li {
+    font-size: 20px;
+    
+}
+
+a:link {
+    color: rgba(7, 119, 248, 0.89);
+}
+
+a:visited {
+    color: rgb(226, 127, 102);
+}
+
+footer {
+    background-color: black;
+    height: 50px;
+    /* color: gold; */
+    position: fixed;
+    bottom: 0;
+    width: 960px;
+    font-size: 15px;
+}
+
+#footerLink {
+    float: left;
+    padding-top: 25px;
+    padding-left: 10px;
+    /* position: fixed; */
+    /* bottom: 0; */
+    /* text-align: left; */
+}
+
+#email {
+    float: right;
+    padding-top: 25px;
+    padding-right: 10px;
+    /* position: fixed; */
+    /* bottom: 0;  */
+    /* text-align: right; */
 }
