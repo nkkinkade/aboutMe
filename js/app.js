@@ -46,7 +46,7 @@ if (kids === 'yes' || kids === 'y') {
 
 var pets = prompt('Are you an animal lover, ' + userName + '? How about Nathan, do you think he has any pets?').toLowerCase().trim();
 while (pets !== 'yes' && pets !== 'no' && pets !== 'y' && pets !== 'n') {
-  pets = prompt('Please use yes/no or y/n, ' + userName + '. Does Nathan have any pets?').toLowerCase().trim();
+  pets = prompt('Use yes/no or y/n, ' + userName + '. I don\'t what to have to tell you again. Does Nathan have any pets?').toLowerCase().trim();
 }
 if (pets === 'yes' || pets === 'y') {
 //   console.log('Absolutely! Nathan has 1 puppy name Beanie!');
@@ -58,7 +58,7 @@ if (pets === 'yes' || pets === 'y') {
 
 var travel = prompt('Last one, ' + userName + '! Has Nathan ever traveled across the ocean?').toLowerCase().trim();
 while (travel !== 'yes' && travel !== 'no' && travel !== 'y' && travel !== 'n') {
-  travel = prompt('Please use yes/no or y/n. Has Nathan ever traveled across the ocean?').toLowerCase().trim();
+  travel = prompt('Yes/no or y/n only, ' + userName '. I\'m disapointed in you. Has Nathan ever traveled across the ocean?').toLowerCase().trim();
 }
 if (travel === 'yes' || travel === 'y') {
 //   console.log('Nope! Nathan has been to Canada and Mexico, but has yet to leave the continent.');
