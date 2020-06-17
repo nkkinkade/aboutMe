@@ -3,10 +3,18 @@ console.log('This file is connected');
 
 
 
-var userName = prompt('What is your name?');
+var userName = prompt('What is your name?').trim();
+while (!userName) {
+  userName = prompt('What is your name, Please, provide it now!');
+}
 var greeting;
 greeting = 'Welcome, ' + userName + '!';
+
+
+
 document.getElementById('greeting').innerHTML = greeting;
+
+var userPoints = 0;
 
 var hair = prompt('Hello, ' + userName + '! Does Nathan have long hair?').toLowerCase().trim();
 while (hair !== 'yes' && hair !== 'no' && hair !== 'y' && hair !== 'n') {
@@ -56,7 +64,7 @@ if (pets === 'yes' || pets === 'y') {
   alert('Wrong. Nathan is definitely an animal person. He has 1 puppy name Beanie!');
 }
 
-var travel = prompt('Last one, ' + userName + '! Has Nathan ever traveled across the ocean?').toLowerCase().trim();
+var travel = prompt('Fifth one, ' + userName + '! Has Nathan ever traveled across the ocean?').toLowerCase().trim();
 while (travel !== 'yes' && travel !== 'no' && travel !== 'y' && travel !== 'n') {
   travel = prompt('Yes/no or y/n only, ' + userName + '. I\'m disapointed in you. Has Nathan ever traveled across the ocean?').toLowerCase().trim();
 }
@@ -67,3 +75,33 @@ if (travel === 'yes' || travel === 'y') {
 //   console.log('That\'s correct! Nathan has been to Canada and Mexico, but has yet to leave the continent.');
   alert('That\'s correct! Nathan has been to Canada and Mexico, but has yet to leave the continent.');
 }
+
+// The following code was borrowed from Craig during Lab discussion
+var opportunities = 4;
+var answer = 5;
+
+while (opportunities > 0) {
+  var userChoice = prompt('Guess the number I\'m thinking of between 1-20. You have 4 guesses.').trim();
+  if (!userChoice) {
+    break;
+  }
+  userChoice = Number(userChoice);
+
+  if (userChoice === answer) {
+    alert('Correct! Great guessing!');
+    opportunities = 0;
+    break;
+  } else {
+    if (userChoice < answer){
+      alert('Too Low!');
+    }
+    if (userChoice > answer) {
+      alert('Too High!');
+    }
+  }
+
+  opportunities = opportunities - 1;
+  console.log('guessCount is ' + opportunities);
+}
+
+alert('The answer was 5!')
