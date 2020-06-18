@@ -88,7 +88,7 @@ var opportunities = 4;
 var answer = 5;
 
 while (opportunities > 0) {
-  var userChoice = prompt('Guess the number I\'m thinking of between 1-20. You have 4 guesses.').trim();
+  var userChoice = prompt('Guess the number I\'m thinking of between 1-20. You have ' + opportunities + ' guesses.').trim();
   if (!userChoice) {
     break;
   }
@@ -107,12 +107,21 @@ while (opportunities > 0) {
       alert('Too High!');
     }
   }
-
   opportunities = opportunities - 1;
   console.log('guessCount is ' + opportunities);
 }
 alert('The answer was 5!');
 
+var favoriteFood = ['pizza', 'tacos', 'steak', 'potatoes'];
+console.log(favoriteFood);
 
+var opportunitiesTwo = 6;
+
+while (opportunitiesTwo > 0) {
+  var guess = prompt(userName + ', what is one of Nathan\'s favorite foods? You have ' + opportunitiesTwo + 'guesses left.').toLowerCase().trim();
+  if (!guess) {
+    break;
+  }
+}
 
 console.log('This is the user point total: ', userPoints);
