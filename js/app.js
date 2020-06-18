@@ -84,6 +84,9 @@ if (travel === 'yes' || travel === 'y') {
 // console.log('This is the user point total: ', userPoints);
 
 // The following code was borrowed from Craig during Lab discussion
+
+// Add a 6th question to the guessing game that takes in a numeric input by prompting the user to guess a number.
+// It should give the user exactly four opportunities to get the correct answer.
 var opportunities = 4;
 var answer = 5;
 
@@ -99,7 +102,9 @@ while (opportunities > 0) {
     userPoints += 1;
     opportunities = 0;
     break;
-  } else {
+  }
+  // Indicates through an alert if the guess is “too high” or “too low”.
+  else {
     if (userChoice < answer){
       alert('Too Low!');
     }
@@ -107,21 +112,49 @@ while (opportunities > 0) {
       alert('Too High!');
     }
   }
-  opportunities = opportunities - 1;
+  opportunities--;
   console.log('guessCount is ' + opportunities);
 }
-alert('The answer was 5!');
+// After all attempts have been exhausted, tell the user the correct answer. Consider using a loop of some sort.
+alert('The answer was ' + answer + '!');
 
+
+
+// Add a 7th question that has multiple possible correct answers that are stored in an array.
 var favoriteFood = ['pizza', 'tacos', 'steak', 'potatoes'];
 console.log(favoriteFood);
 
+// Give the user 6 attempts to guess the correct answer.
 var opportunitiesTwo = 6;
 
+// Consider using a loop of some sort for this question.
 while (opportunitiesTwo > 0) {
-  var guess = prompt(userName + ', what is one of Nathan\'s favorite foods? You have ' + opportunitiesTwo + 'guesses left.').toLowerCase().trim();
+  var guess = prompt(userName + ', what is one of Nathan\'s favorite foods? You have ' + opportunitiesTwo + ' guesses left.').toLowerCase().trim();
+  var correct = false;
   if (!guess) {
     break;
   }
+
+  for (var i = 0; i < favoriteFood.length; i++){
+    if(guess === favoriteFood[i]){
+      alert('Correct! That is one of Nathan\'s favorite foods!');
+      correct =true;
+      userPoints++
+      break;
+    }
+  }
+  if(correct === false){
+    alert('Nope! Try again!');
+  } else{
+    break;
+  }
+  opportunitiesTwo--;
 }
 
+// The guesses will end once the user guesses a correct answer or they run out of attempts.
+// Display all the possible correct answers to the user.
+alert('My favorite foods are ' + favoriteFood + '. Thanks for playing!');
+alert('You got ' + userPoints + ' out of 7 points correct.');
 console.log('This is the user point total: ', userPoints);
+
+
